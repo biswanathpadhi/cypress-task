@@ -27,7 +27,6 @@ describe('Jio Order Spec', () => {
     cy.get(':nth-child(1) > .outer-container > .cat-item').click();
     cy.get('body').then($body => {
       if ($body.find('.qty-minus').length > 0) {
-        console.log('inside');
         cy.get('.qty-minus').click();
       }
     })
