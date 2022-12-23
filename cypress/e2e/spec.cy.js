@@ -60,12 +60,10 @@ describe('Jio Order Spec', () => {
 
       //click continue
       cy.get('#continueButton').click();
-    })
-
-    // continue on review payment button
-    cy.origin('https://api-blackbox.epaylater.in/txn/summary', () => {
+      
+      // continue on review payment button
       cy.get('.deskPrimary').click();
-    });
+    })
 
     cy.get('.label-one', { timeout: 7_000 }).should('have.text', 'Success!');
   })
