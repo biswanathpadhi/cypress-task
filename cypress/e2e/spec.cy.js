@@ -15,7 +15,7 @@ describe('Jio Order Spec', () => {
     cy.get('.jm-btn').click();
 
     cy.get('#field').click({ force: true });
-    cy.wait(3000);
+
     cy.get('#field[data-v-6c494012]').type(410210, { force: true });
 
     cy.get('.pincodeContainer > .address', { timeout: 3_000 }).should('have.text', ' Kamothe, Maharashtra ');
@@ -60,7 +60,7 @@ describe('Jio Order Spec', () => {
 
       //click continue
       cy.get('#continueButton').click();
-      
+
       // continue on review payment button
       cy.get('.deskPrimary').click();
     })
